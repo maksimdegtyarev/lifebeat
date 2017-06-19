@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import Form from '../components/form'
 import {connect} from 'react-redux'
 import EventsList from './eventsListContainer'
@@ -19,6 +20,9 @@ export class CommonPageContainer extends Component {
 			</div>
 		)
 	}
+}
+CommonPageContainer.propTypes = {
+	submitForm: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => {

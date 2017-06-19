@@ -4,6 +4,7 @@ import ControlLabel from 'react-bootstrap/lib/ControlLabel'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import Button from 'react-bootstrap/lib/button'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 
 export default class Form extends Component {
@@ -37,4 +38,7 @@ export default class Form extends Component {
 			</FormGroup>
 		)
 	}
+}
+Form.propTypes = {
+	submit: PropTypes.func.isRequired
 }

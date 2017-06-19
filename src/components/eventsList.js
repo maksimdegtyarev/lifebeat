@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Event from './event'
 import Alert from 'react-bootstrap/lib/Alert'
+import PropTypes from 'prop-types'
 
 
 export default class EventsList extends Component {
@@ -27,4 +28,9 @@ export default class EventsList extends Component {
 			</div>
 		)
 	}
+}
+EventsList.propTypes = {
+	list: PropTypes.array.isRequired,
+	currentAuthor: PropTypes.number.isRequired,
+	deleteHandle: PropTypes.func.isRequired
 }

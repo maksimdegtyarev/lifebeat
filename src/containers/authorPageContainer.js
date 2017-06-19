@@ -3,9 +3,10 @@ import {connect} from 'react-redux'
 import EventsList from './eventsListContainer'
 import Name from '../components/name'
 import Col from 'react-bootstrap/lib/col'
+import PropTypes from 'prop-types'
 
 
-export class MyPageContainer extends Component {
+export class AuthorPageContainer extends Component {
 	render() {
 		return (
 			<div className="container">
@@ -19,6 +20,14 @@ export class MyPageContainer extends Component {
 		)
 	}
 }
+AuthorPageContainer.propTypes = {
+	name: PropTypes.string,
+	id: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
+	])
+}
+
 const mapStateToProps = (state, ownProps) => {
 	let id = state.currentAuthor
 	if(ownProps.match.params.id) {
@@ -29,4 +38,4 @@ const mapStateToProps = (state, ownProps) => {
 		id
 	}
 }
-export default connect(mapStateToProps)(MyPageContainer)
+export default connect(mapStateToProps)(AuthorPageContainer)

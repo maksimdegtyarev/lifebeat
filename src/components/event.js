@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import Panel from 'react-bootstrap/lib/panel'
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 
 export default class Event extends Component {
@@ -52,4 +53,9 @@ export default class Event extends Component {
 			</Container>
 		)
 	}
+}
+Event.propTypes = {
+	item: PropTypes.object.isRequired,
+	canDelete: PropTypes.bool,
+	deleteHandle: PropTypes.func.isRequired
 }
