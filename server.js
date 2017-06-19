@@ -23,10 +23,4 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/', 'index.html'));
 });
 
-app.listen(3000, 'localhost', error => {
-	  if(error) {
-    	  console.log(error);
-    	  return;
-  	}
-  	console.log('Listening at http://localhost:3000');
-});
+app.listen(process.env.PORT || 8080);

@@ -28,7 +28,9 @@ module.exports = {
 		extensions: ['*', '.js', '.jsx']
 	},
 	devServer: {
-    	contentBase: './src'
+    	contentBase: './src',
+		compress: true,
+    	disableHostCheck: true
   	},
 	plugins: [
 		new ExtractTextPlugin("[name].css")

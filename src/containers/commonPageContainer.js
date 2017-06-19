@@ -4,7 +4,7 @@ import Form from '../components/form'
 import {connect} from 'react-redux'
 import EventsList from './eventsListContainer'
 import {addEvent} from '../actions'
-import Col from 'react-bootstrap/lib/col'
+import Col from 'react-bootstrap/lib/Col'
 
 
 export class CommonPageContainer extends Component {

@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import EventsList from './eventsListContainer'
 import Name from '../components/name'
-import Col from 'react-bootstrap/lib/col'
+import Col from 'react-bootstrap/lib/Col'
 import PropTypes from 'prop-types'
 
 

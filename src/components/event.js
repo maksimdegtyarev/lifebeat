@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import Panel from 'react-bootstrap/lib/panel'
+import Panel from 'react-bootstrap/lib/Panel'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 

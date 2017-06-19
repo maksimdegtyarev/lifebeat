@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import Navbar from 'react-bootstrap/lib/Navbar'
 import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
-import Col from 'react-bootstrap/lib/col'
+import Col from 'react-bootstrap/lib/Col'
 
 
 export default (props) => {
