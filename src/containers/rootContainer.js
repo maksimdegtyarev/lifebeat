@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import MyPage from './myPageContainer'
+import AuthorPage from './authorPageContainer'
 import CommonPage from './commonPageContainer'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
@@ -13,7 +13,8 @@ export default class RootContainer extends Component {
 				<div>
 					<Header />
 					<Route exact path="/" component={CommonPage} />
-					<Route path="/my" component={MyPage} />
+					<Route path="/my" component={AuthorPage} />
+					<Route path="/author/:id" component={AuthorPage} />
 				</div>
 			</Router>
 		)

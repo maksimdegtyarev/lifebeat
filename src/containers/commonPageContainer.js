@@ -3,14 +3,19 @@ import Form from '../components/form'
 import {connect} from 'react-redux'
 import EventsList from './eventsListContainer'
 import {addEvent} from '../actions'
+import Col from 'react-bootstrap/lib/col'
 
 
 export class CommonPageContainer extends Component {
 	render() {
 		return (
-			<div>
-				<Form submit={(text) => this.props.submitForm(text)} />
-				<EventsList />
+			<div className="container">
+				<Col xs={12} sm={4}>
+					<Form submit={(text) => this.props.submitForm(text)} />
+				</Col>
+				<Col xs={12} sm={6}>
+					<EventsList />
+				</Col>
 			</div>
 		)
 	}
@@ -24,7 +29,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		submitForm: (text) => {
-			dispatch(addEvent(text))
+			const trimmedText = text.trim()
+			if(trimmedText.length) {
+				dispatch(addEvent(trimmedText))
+			}
 		}
 	}
 }
