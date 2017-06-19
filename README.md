@@ -1,6 +1,6 @@
 # Lifebeat
 Lifebeat test project.
-**[DEMO](lifebeat.now.sh)**
+**[DEMO](http://lifebeat.now.sh)**
 
 ## Install
 ```
